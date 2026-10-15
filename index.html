@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="ניתוח עצמאי של רן מס: איפה ישראל עומדת ב-57 מדדי חינוך מול מדינות ה-OECD, מהגיל הרך ועד הצעירים. כל מספר עם מקור.">
+<meta name="description" content="השוואה עצמאית של מדדי החינוך בישראל מול מדינות ה-OECD, מהגיל הרך ועד הצעירים. 57 מדדים, כל מספר עם מקור.">
 <meta name="author" content="רן מס">
 <link rel="canonical" href="https://data-glance.eduwanderer.net/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
 <meta property="og:site_name" content="ישראל במבט משווה">
 <meta property="og:title" content="ישראל במבט משווה: החינוך בישראל מול מדינות ה-OECD">
-<meta property="og:description" content="ניתוח עצמאי של רן מס: איפה ישראל עומדת ב-57 מדדי חינוך מול מדינות ה-OECD, מהגיל הרך ועד הצעירים. כל מספר עם מקור.">
+<meta property="og:description" content="השוואה עצמאית של מדדי החינוך בישראל מול מדינות ה-OECD, מהגיל הרך ועד הצעירים. 57 מדדים, כל מספר עם מקור.">
 <meta property="og:url" content="https://data-glance.eduwanderer.net/">
 <meta property="og:image" content="https://data-glance.eduwanderer.net/og.png">
 <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="ישראל במבט משווה: השוואה עצמאית של מדדי החינוך בישראל מול מדינות ה-OECD, מהגיל הרך ועד הצעירים.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ישראל במבט משווה: החינוך בישראל מול מדינות ה-OECD">
-<meta name="twitter:description" content="ניתוח עצמאי של רן מס: איפה ישראל עומדת ב-57 מדדי חינוך מול מדינות ה-OECD, מהגיל הרך ועד הצעירים. כל מספר עם מקור.">
+<meta name="twitter:description" content="השוואה עצמאית של מדדי החינוך בישראל מול מדינות ה-OECD, מהגיל הרך ועד הצעירים. 57 מדדים, כל מספר עם מקור.">
 <meta name="twitter:image" content="https://data-glance.eduwanderer.net/og.png">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
@@ -43,10 +43,6 @@
   --num:'Jost','Futura','Avenir Next','Segoe UI',Arial,sans-serif;
   --line:2px solid var(--ink);
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --paper:#14161A;--card:#1C1F24;--ink:#E7E9EC;--ink2:#C3C8CF;--ink3:#979DA6;--stone:#3D434B;--stone2:#2A2F36;
-  --cur:#3A4F8F;--oncur:#E7E9EC;--bar:#727A85;--redtx:#F07A62;--red:#F07A62;--blu:#8AA2F4;--sky:#25335E;--blush:#45291F;--mist:#2F343C;--onink:#14161A;--onblu:#0D1226;
-  --r1:#1E2843;--r2:#2C4076;--r3:#405DB1;--r4:#6F8CE6;--r5:#B4C5F7;--rt-lo:#E7E9EC;--rt-hi:#0D1226;color-scheme:dark}}
 :root[data-theme="dark"]{
   --paper:#14161A;--card:#1C1F24;--ink:#E7E9EC;--ink2:#C3C8CF;--ink3:#979DA6;--stone:#3D434B;--stone2:#2A2F36;
   --cur:#3A4F8F;--oncur:#E7E9EC;--bar:#727A85;--redtx:#F07A62;--red:#F07A62;--blu:#8AA2F4;--sky:#25335E;--blush:#45291F;--mist:#2F343C;--onink:#14161A;--onblu:#0D1226;
@@ -520,7 +516,6 @@ details p{margin:10px 26px 0 0;color:var(--ink2);font-size:15.5px}
 /* footer */
 /* UX-33: the footer stays a dark band in dark mode instead of flipping to a light panel */
 .tb{--fbg:var(--ink);--ffg:var(--onink);background:var(--fbg);color:var(--ffg);margin-top:64px}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tb{--fbg:#0B0D10;--ffg:#E7E9EC}}
 :root[data-theme="dark"] .tb{--fbg:#0B0D10;--ffg:#E7E9EC}
 .tb .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:30px 40px;padding-block:40px}
 .tb h2{margin:0 0 10px;font-size:44px}
@@ -880,7 +875,7 @@ const SOURCES=["OECD, Education at a Glance 2026: OECD Indicators, והכרך ה
 const SITE_META={by:'ניתוח ועריכה: רן מס',indep:'אתר עצמאי. אינו פרסום של ה-OECD.',updated:'עודכן באוקטובר 2026',version:'גרסה 5'};
 const REPORT_ADDR='ran.intel.feeds@gmail.com';
 /* UX-02: link-preview title and description. The own-address bundle copies them into the document head (og:, twitter:); here they also fill a description meta. */
-const PREVIEW={title:'ישראל במבט משווה: החינוך בישראל מול מדינות ה-OECD',desc:'ניתוח עצמאי של רן מס: איפה ישראל עומדת ב-57 מדדי חינוך מול מדינות ה-OECD, מהגיל הרך ועד הצעירים. כל מספר עם מקור.'};
+const PREVIEW={title:'ישראל במבט משווה: החינוך בישראל מול מדינות ה-OECD',desc:'השוואה עצמאית של מדדי החינוך בישראל מול מדינות ה-OECD, מהגיל הרך ועד הצעירים. 57 מדדים, כל מספר עם מקור.'};
 (function(){try{if(!document.querySelector('meta[name="description"]')){const m=document.createElement('meta');m.name='description';m.content=PREVIEW.desc;document.head.append(m);}}catch(e){}})();
 function addrEl(){return REPORT_ADDR.startsWith('[')?h('span',{class:'addr tbd',raw:REPORT_ADDR}):h('a',{class:'addr',href:'mailto:'+REPORT_ADDR,raw:REPORT_ADDR});}
 /* Owner 2026-10-13: the author's name leads to his About page; the home address of his site appears, quietly, in the footer and the author note. No banner, no call to action. */
@@ -897,7 +892,7 @@ function setMode(deep){S.deep=deep;document.body.classList.toggle('deep',deep);$
 $('#m-brief').addEventListener('click',()=>{setMode(false);route(true);});
 $('#m-deep').addEventListener('click',()=>{setMode(true);route(true);});
 (function(){const saved=store('ise-theme');if(saved==='dark'||saved==='light')document.documentElement.setAttribute('data-theme',saved);
- $('#themebtn').addEventListener('click',()=>{const cur=document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');const nx=cur==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',nx);store('ise-theme',nx);});})();
+ $('#themebtn').addEventListener('click',()=>{const cur=document.documentElement.getAttribute('data-theme')||'light';const nx=cur==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',nx);store('ise-theme',nx);});})();
 
 /* ---------- data helpers ---------- */
 function fmt(v,ind){if(v==null)return 'אין נתון';const d=ind.unit==='ratio'?Math.max(ind.dec,2):ind.dec;const s=Math.abs(v).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});const sg=v<0?'−':'';if(ind.unit==='%')return sg+s+'%';if(ind.unit==='USD')return sg+'$'+s;return sg+s;}
